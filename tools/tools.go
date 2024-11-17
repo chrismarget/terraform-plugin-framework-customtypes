@@ -7,5 +7,5 @@ package tools
 
 import (
 	// license compliance
-	_ "github.com/google/go-licenses"
+	_ "github.com/chrismarget-j/go-licenses"
 )

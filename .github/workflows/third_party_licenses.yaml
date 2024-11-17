@@ -21,10 +21,10 @@ jobs:
           go-version: '1.23.1'
 
       - name: Collect Third Party Licenses
-        run: go run github.com/google/go-licenses save   --ignore github.com/Juniper --ignore github.com/chrismarget-j --save_path Third_Party_Code --force ./...
+        run: go run github.com/chrismarget-j/go-licenses save   --save_path Third_Party_Code --force ./...
 
       - name: Write NOTICES.md
-        run: go run github.com/google/go-licenses report --ignore github.com/Juniper --ignore github.com/chrismarget-j --template .notices.tpl ./... > Third_Party_Code/NOTICES.md
+        run: go run github.com/chrismarget-j/go-licenses report --template .notices.tpl ./... > Third_Party_Code/NOTICES.md
 
       - name: Check Repo Clean
         run: |
